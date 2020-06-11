@@ -266,26 +266,6 @@ namespace mklib
                     cRow["allpass1"] = st.gcnt - st.allpass1 == 0 ? 1 : 0;
                     cRow["allpass2"] = st.gcnt - st.allpass2 == 0 ? 1 : 0;
                     cRow["allpass3"] = st.gcnt - st.allpass3 == 0 ? 1 : 0;
-                    cRow["voca_cult_avg"] =st.voca_cult_gcnt>0? st.voca_cult_avg/ st.voca_cult_gcnt:0;
-                    cRow["voca_cult_avg1"]= st.voca_cult_gcnt > 0 ? st.voca_cult_avg1 / st.voca_cult_gcnt : 0;
-                    cRow["voca_cult_avg2"] = st.voca_cult_gcnt > 0 ? st.voca_cult_avg2 / st.voca_cult_gcnt : 0;
-                    cRow["voca_cult_avg3"] = st.voca_cult_gcnt > 0 ? st.voca_cult_avg3 / st.voca_cult_gcnt : 0;
-                    cRow["voca_cult_mue"] = st.voca_cult_gcnt > 0 ? st.voca_cult_mue / st.voca_cult_gcnt : 0;
-
-
-                    cRow["voca_prof_avg"] = st.voca_prof_gcnt>0? st.voca_prof_avg/ st.voca_prof_gcnt:0;
-                    cRow["voca_prof_avg1"] = st.voca_prof_gcnt > 0 ? st.voca_prof_avg1 / st.voca_prof_gcnt : 0;
-                    cRow["voca_prof_avg2"] = st.voca_prof_gcnt > 0 ? st.voca_prof_avg2 / st.voca_prof_gcnt : 0;
-                    cRow["voca_prof_avg3"] = st.voca_prof_gcnt > 0 ? st.voca_prof_avg3 / st.voca_prof_gcnt : 0;
-                    cRow["voca_prof_mue"] = st.voca_prof_gcnt > 0 ? st.voca_prof_mue / st.voca_prof_gcnt : 0;
-                    /*
-                     * stud_ref | mark1 | mark2 | mark3 | mark  | ran1 | ran2 | ran3 | ran | SectTotal | total_crs_ncp 
-                     * | mnt_of_ppl1 | mnt_of_ppl2 | mnt_of_ppl3 | allpass1 | allpass2 | allpass3 
-                     * | voca_cult_avg | voca_cult_avg1 | voca_cult_avg2 | voca_cult_avg3 
-                     * | voca_prof_avg | voca_prof_avg1 | voca_prof_avg2 | voca_prof_avg3 
-                     * | voca_cult_mue | voca_prof_mue | SchoolEval1      |
-                     * SchoolEval2 | SchoolEval3 | SE_HONOR1 | SE_HONOR2 | SE_HONOR3 | m_grade | voca_c_m_grade | voca_p_m_grade | volunteer_hr | HonorSch1 | HonorSch2 | HonorSch3 | HonorSchReg1 | HonorSchReg2 | HonorSchReg3 | HonorCert1 | HonorCert2 | HonorCert3 | class_rank | grade_rank | dsej | adjmsg1 | adjmsg2 | adjmsg3 |
-                     * */
                     int EvalHonor = 0;
                     cRow["SchoolEval1"] = MK_Utils.GetEval(
                         cno,
@@ -324,6 +304,9 @@ namespace mklib
                         cRow["voca_cult_avg3"] = Math.Round(st.voca_cult_avg3 / st.voca_cult_gcnt, 2, MidpointRounding.AwayFromZero);
                         cRow["voca_cult_avg"] = Math.Round(st.voca_cult_avg / st.voca_cult_gcnt, 2, MidpointRounding.AwayFromZero);
                         cRow["voca_cult_mue"] = Math.Round(st.voca_cult_mue / st.voca_cult_gcnt, 2, MidpointRounding.AwayFromZero);
+                    }
+                    if(st.voca_prof_gcnt>0)
+                    { 
                         cRow["voca_prof_avg1"] = Math.Round(st.voca_prof_avg1 / st.voca_prof_gcnt, 2, MidpointRounding.AwayFromZero);
                         cRow["voca_prof_avg2"] = Math.Round(st.voca_prof_avg2 / st.voca_prof_gcnt, 2, MidpointRounding.AwayFromZero);
                         cRow["voca_prof_avg3"] = Math.Round(st.voca_prof_avg3 / st.voca_prof_gcnt, 2, MidpointRounding.AwayFromZero);
