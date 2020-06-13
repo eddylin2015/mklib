@@ -159,8 +159,8 @@ namespace mklib
             gm1 = Math.Round(gm1, 2, MidpointRounding.AwayFromZero);
             gm2 = Math.Round(gm2, 2, MidpointRounding.AwayFromZero);
             gm3 = Math.Round(gm3, 2, MidpointRounding.AwayFromZero);
-            gm = Math.Round(gm, 2, MidpointRounding.AwayFromZero);
-            gm_mue = Math.Round(gm_mue, 2, MidpointRounding.AwayFromZero);
+            gm = Math.Round(gm, 2);//, MidpointRounding.AwayFromZero);
+            gm_mue = Math.Round(gm_mue, 2);//, MidpointRounding.AwayFromZero);
             lastrow["total1"] = gm1;
             lastrow["total2"] = gm2;
             lastrow["total3"] = gm3;
