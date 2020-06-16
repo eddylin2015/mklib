@@ -6,7 +6,6 @@ xml/
 obj/
 Debug/
 calcmark.api.cs
-calcmark.p.fmt.cs
 Class1.cs
 DB_Conf.cs
 kassess.cs
